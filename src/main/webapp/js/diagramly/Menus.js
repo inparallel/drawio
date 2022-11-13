@@ -898,7 +898,7 @@
 			var cells = mxUtils.sortCells(graph.model.getTopmostCells(graph.getSelectionCells()));
 			var xml = mxUtils.getXml((cells.length == 0) ? editorUi.editor.getGraphXml() : graph.encodeCells(cells));
 			editorUi.copyImage(cells, xml);
-		}));
+		}), null, null, Editor.ctrlKey + '+Shift+C');
 
 		// Disabled in Safari as operation is not allowed
 		action.visible = Editor.enableNativeCipboard && editorUi.isExportToCanvas() && !mxClient.IS_SF;
